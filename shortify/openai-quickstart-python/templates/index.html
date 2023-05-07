@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text Summarizer</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='logo.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <header>
+  <img src="{{ url_for('static', filename='logo.png') }}" class="icon" />
+  <h3>Yunsu's Text Shortify</h3>
+  </header>
+  <main>
+    <form action="/" method="post" id="form">
+      <label for="input">Enter your text:</label>
+      <textarea id="input" name="input" rows="10" cols="50"></textarea>
+      <textarea id="output" name="output" rows="10" cols="50" disabled>{{ result }}</textarea>
+      <label for="limit">Amount Limit:</label>
+      <input type="number" id="limit" name="limit" min="1" max="1000" value="">
+      <button type="submit" id="convert">Convert</button>
+    </form>
+  </main>
+  <footer>
+    <p>Created by Yunsu Lee, &copy; 2023</p>
+  </footer>
+</body>
+</html>
